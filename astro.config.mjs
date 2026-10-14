@@ -8,9 +8,7 @@ import solidJs from "@astrojs/solid-js"
 export default defineConfig({
   output: 'static',
   image: {
-    service: {
-      entrypoint: 'astro/assets/services/passthrough'
-    }
+    service: passthroughImageService(),
   },
   site: "https://astro-sphere-demo.vercel.app",
   integrations: [mdx(), sitemap(), solidJs(), tailwind({ applyBaseStyles: false })],
